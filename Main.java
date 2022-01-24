@@ -1,4 +1,3 @@
-package save_GOSecuri;
 import java.awt.Desktop;
 import java.io.*;
 
