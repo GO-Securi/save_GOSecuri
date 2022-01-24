@@ -15,5 +15,6 @@ class main {
         bw.write("</body></html>");
         bw.close();
         println("UwU, à chier");
+        println("Be better.");
     }
 }
