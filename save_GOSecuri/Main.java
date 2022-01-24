@@ -1,7 +1,7 @@
 package save_GOSecuri;
 import java.io.*;
 
-class main {
+class Main {
 
     public static void main(String[] args) throws Exception {
         File f = new File("source.html");
@@ -13,6 +13,5 @@ class main {
         bw.write("</div>");
         bw.write("</body></html>");
         bw.close();
-        //test
     }
 }
