@@ -1,4 +1,4 @@
-import java.awt.Desktop;
+package save_GOSecuri;
 import java.io.*;
 
 class main {
