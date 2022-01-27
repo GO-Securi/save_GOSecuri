@@ -14,6 +14,6 @@ class Main {
         bw.write("<p>UwU</p>");
         bw.write("</div>");
         bw.write("</body></html>");
-        bw.close(); //test
+        bw.close();
     }
 }
