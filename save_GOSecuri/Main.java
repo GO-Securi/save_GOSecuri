@@ -6,6 +6,7 @@ class Main {
     public static void main(String[] args) throws Exception {
         File f = new File("source.html");
         BufferedWriter bw = new BufferedWriter(new FileWriter(f));
+        System.out.println("Mdr ça ne fonctionne pas");
         bw.write("<html><body>");
         bw.write("<div>");
         bw.write("<p>OwO</p>");
