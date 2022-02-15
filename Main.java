@@ -7,9 +7,11 @@ import java.io.BufferedWriter;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println("Debut script");
-        String path = "";
 
+
+        //etape 1
+        System.out.println("Debut generation liste agents");
+        String path = "";
 
         //Lecture du fichier staff.txt
         try (FileWriter writer = new FileWriter(new File(path + "html\\agents.html"));
@@ -21,10 +23,10 @@ public class Main {
             BufferedReader staff = new BufferedReader(new FileReader(new File(path + "datas\\staff.txt")));
             String line_staff = staff.readLine();
             while (line_staff != null) {
-                bw.write("<li class=\"agent\" ><a href=\""+ line_staff +".html\">");
+                bw.write("<li class=\"agent\" ><a href=\""+ line_staff + "\\" + line_staff + ".html\">");
                 BufferedReader agent = new BufferedReader(new FileReader(new File(path + "datas\\"+ line_staff +".txt")));
                 String line_agent = agent.readLine();
-                int i = 0;
+                int i = 0; 
                 while (i <= 1) {
                     i++;
                     bw.write(line_agent + " ");
@@ -32,10 +34,39 @@ public class Main {
                 }
                 bw.write("</a></li>");
                 line_staff = staff.readLine();
+
+                //etape 2
+
+
+
+
+
+
+
+
             }
             bw.write("</ul><footer class=\"footer\"><p class=\"mentions\">Mentions légales</p></footer></body></html>");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        //etape 2
+
+     
+
+        try (FileWriter writer = new FileWriter(new File(path + line_staff + "\\" + line_staff + "agents.html"));
+        BufferedWriter bw = new BufferedWriter(writer)){
+
+            
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
     }
 }
