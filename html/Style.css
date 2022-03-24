@@ -91,3 +91,29 @@ header{
     width: 50%;
     top: 15%;
 }
+
+@font-face{
+font-family: "Roboto";
+src: url("/fonts/Roboto-Thin.ttf");
+
+}
+.body{
+    font-family: Roboto;
+}
+
+
+
+.div_nomprenom{
+    border: 1px solid black;
+    width: 200px;
+    margin: auto;
+    margin-top: 5%;
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+.nomprenom{
+}
+
+.img_profil{
+}
