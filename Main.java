@@ -15,7 +15,7 @@ public class Main {
         String path = "";
 
         //Ecriture du fichier agents.html (liste des agents)
-        try (FileWriter writer = new FileWriter(new File(path + "html\\agents.html"));
+        try (FileWriter writer = new FileWriter(new File(path + "html\\index.html"));
         BufferedWriter bw = new BufferedWriter(writer)){
 
 
@@ -27,20 +27,30 @@ public class Main {
 
 
             while (line_staff != null) {
-
-
                 bw.write("<li class=\"agent\" ><a href=\""+ line_staff + "\\" + "index.html\">");
                 BufferedReader agent = new BufferedReader(new FileReader(new File(path + "datas\\"+ line_staff +".txt")));
                 //etape2
-                //Pour chaque agents on cree un fichier + htacces:
-                System.out.println(path + "html\\" + line_staff + "\\" + "index.html");
-                File dossier = new File(path + "html\\" + line_staff); 
+                //Pour chaque agents on cree un fichier + htpasswd --------------------------------------------------------------------------------
+                System.out.println("Dossier crée: "+path + "html\\" + line_staff);
+                File dossier = new File(path + "html\\" + line_staff); // On cree le dossier si il n'existe pas
                 dossier.mkdir();
+
                 try (FileWriter writer2 = new FileWriter(new File(path + "html\\"+line_staff+"\\index.html"));
                 BufferedWriter bw_fiche_agent = new BufferedWriter(writer2)){
+                    System.out.println("    Fichier crée: "+path + "html\\" + line_staff + "\\" + "index.html");
+
+                    //htpasswd ---------------------------------------------------------------------------------------------------------------------
+                    try (FileWriter writer3 = new FileWriter(new File(path + "html\\"+line_staff+"\\htpasswd"));
+                    BufferedWriter htacces = new BufferedWriter(writer3)){
+                        System.out.println("    Fichier crée: "+path + "html\\"+line_staff+"\\htpasswd");
+                    }catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    //Fin htpasswd -----------------------------------------------------------------------------------------------------------------
+
 
                     //Header
-                    bw_fiche_agent.write("<!DOCTYPE html><html><head><link href=\"Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"logo.png\" alt=\"Logo de l'entreprise\"></header");
+                    bw_fiche_agent.write("<!DOCTYPE html><html><head><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"logo.png\" alt=\"Logo de l'entreprise\"></header");
 
 
                 }catch (IOException e) {
