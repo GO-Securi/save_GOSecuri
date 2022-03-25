@@ -27,14 +27,14 @@ public class Main {
 
             bw.write("<!DOCTYPE html><html><head><link href=\"Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><ul class=\"agents\">");
             //Lecture du fichier staff.txt
-            BufferedReader staff = new BufferedReader(new FileReader(new File(path + "datas\\staff.txt")));
+            BufferedReader staff = new BufferedReader(new FileReader(new File(path + "staff.txt")));
             String line_staff = staff.readLine();
 
 
 
 
             while (line_staff != null) {
-                BufferedReader agent = new BufferedReader(new FileReader(new File(path + "datas\\"+ line_staff +".txt")));
+                BufferedReader agent = new BufferedReader(new FileReader(new File(path + line_staff +".txt")));
 
                 //de 1 a 4 : infos agents
                 //0: Nom
