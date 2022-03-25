@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "My restricted Area"
+AuthUserFile html\afoley\.htpasswd
+Require valid-user

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "My restricted Area"
+AuthUserFile html\jrouletabille\.htpasswd
+Require valid-user
