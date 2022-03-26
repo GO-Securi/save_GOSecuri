@@ -61,22 +61,22 @@ public class Main {
                 //etape2
                 //Pour chaque agents on cree un fichier + htpasswd + htaccess --------------------------------------------------------------------------------
 
-                System.out.println("Dossier crée: "+path + "html\\" + line_staff);
-                File dossier = new File(path + "html\\" + line_staff); // On cree le dossier si il n'existe pas
+                System.out.println("Dossier crée: "+path + "html/" + line_staff);
+                File dossier = new File(path + "html/" + line_staff); // On cree le dossier si il n'existe pas
                 dossier.mkdir();
 
-                try (FileWriter writer2 = new FileWriter(new File(path + "html\\" +line_staff+ "\\index.html"));
+                try (FileWriter writer2 = new FileWriter(new File(path + "html/" +line_staff+ "/index.html"));
                 BufferedWriter bw_fiche_agent = new BufferedWriter(writer2)){
-                    System.out.println("    Fichier crée: "+ path + "html\\" + line_staff + "\\" + "index.html");
+                    System.out.println("    Fichier crée: "+ path + "html/" + line_staff + "/" + "index.html");
 
                     //htaccess ---------------------------------------------------------------------------------------------------------------------
-                    try (FileWriter writer3 = new FileWriter(new File(path + "html\\"+line_staff+ "\\.htaccess"));
+                    try (FileWriter writer3 = new FileWriter(new File(path + "html/"+line_staff+ "/.htaccess"));
                     BufferedWriter htaccess = new BufferedWriter(writer3)){
-                        System.out.println("    Fichier crée: " + path + "html\\"+line_staff+ "\\.htaccess");
+                        System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
                     
                         htaccess.write("AuthType Basic"+ "\n");
                         htaccess.write("AuthName \"My restricted Area\""+ "\n");
-                        htaccess.write("AuthUserFile " + path + "html\\" +line_staff+ "\\.htpasswd" + "\n");
+                        htaccess.write("AuthUserFile " + path + "html/" +line_staff+ "/.htpasswd" + "\n");
                         htaccess.write("Require valid-user");
                     }catch (IOException e) {
                         e.printStackTrace();
@@ -84,9 +84,9 @@ public class Main {
                     //Fin htaccess -----------------------------------------------------------------------------------------------------------------
 
                     //htpasswd ---------------------------------------------------------------------------------------------------------------------
-                    try (FileWriter writer4 = new FileWriter(new File(path + "html\\"+line_staff+ "\\.htpasswd"));
+                    try (FileWriter writer4 = new FileWriter(new File(path + "html/"+line_staff+ "/.htpasswd"));
                     BufferedWriter htpasswd = new BufferedWriter(writer4)){
-                        System.out.println("    Fichier crée: " + path + "html\\"+line_staff+ "\\.htpasswd");
+                        System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htpasswd");
                         htpasswd.write(line_staff+":"+ infos_agents.get(3));
                     }catch (IOException e) {
                         e.printStackTrace();
