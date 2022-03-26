@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "My restricted Area"
-AuthUserFile html\jwest\.htpasswd
-Require valid-user

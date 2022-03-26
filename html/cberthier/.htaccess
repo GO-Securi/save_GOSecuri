@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "My restricted Area"
-AuthUserFile html\cberthier\.htpasswd
-Require valid-user

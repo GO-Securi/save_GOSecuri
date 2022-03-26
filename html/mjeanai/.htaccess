@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "My restricted Area"
-AuthUserFile html\mjeanai\.htpasswd
-Require valid-user
