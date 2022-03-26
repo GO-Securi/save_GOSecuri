@@ -70,27 +70,27 @@ public class Main {
                     System.out.println("    Fichier crée: "+ path + "html/" + line_staff + "/" + "index.html");
 
                     //htaccess ---------------------------------------------------------------------------------------------------------------------
-                    try (FileWriter writer3 = new FileWriter(new File(path + "html/"+line_staff+ "/.htaccess"));
-                    BufferedWriter htaccess = new BufferedWriter(writer3)){
-                        System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
+                    // try (FileWriter writer3 = new FileWriter(new File(path + "html/"+line_staff+ "/.htaccess"));
+                    // BufferedWriter htaccess = new BufferedWriter(writer3)){
+                    //     System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
                     
-                        htaccess.write("AuthType Basic"+ "\n");
-                        htaccess.write("AuthName \"My restricted Area\""+ "\n");
-                        htaccess.write("AuthUserFile " + path + "html/" +line_staff+ "/.htpasswd" + "\n");
-                        htaccess.write("Require valid-user");
-                    }catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    //     htaccess.write("AuthType Basic"+ "\n");
+                    //     htaccess.write("AuthName \"My restricted Area\""+ "\n");
+                    //     htaccess.write("AuthUserFile " + path + "html/" +line_staff+ "/.htpasswd" + "\n");
+                    //     htaccess.write("Require valid-user");
+                    // }catch (IOException e) {
+                    //     e.printStackTrace();
+                    // }
                     //Fin htaccess -----------------------------------------------------------------------------------------------------------------
 
                     //htpasswd ---------------------------------------------------------------------------------------------------------------------
-                    try (FileWriter writer4 = new FileWriter(new File(path + "html/"+line_staff+ "/.htpasswd"));
-                    BufferedWriter htpasswd = new BufferedWriter(writer4)){
-                        System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htpasswd");
-                        htpasswd.write(line_staff+":"+ infos_agents.get(3));
-                    }catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    // try (FileWriter writer4 = new FileWriter(new File(path + "html/"+line_staff+ "/.htpasswd"));
+                    // BufferedWriter htpasswd = new BufferedWriter(writer4)){
+                    //     System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htpasswd");
+                    //     htpasswd.write(line_staff+":"+ infos_agents.get(3));
+                    // }catch (IOException e) {
+                    //     e.printStackTrace();
+                    // }
                     //Fin htpasswd -----------------------------------------------------------------------------------------------------------------
                     System.out.println("    Liste info: " + infos_agents);
                     System.out.println("    Liste inventaire: " + inv_agents);
