@@ -21,7 +21,7 @@ public class Main {
         dossierhtml.mkdir();
         Files.copy(Paths.get("Style.css"), Paths.get("html", "Style.css"), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(Paths.get("LogoGoSecuri.png"), Paths.get("html", "LogoGoSecuri.png"), StandardCopyOption.REPLACE_EXISTING);
-        try (FileWriter writer = new FileWriter(new File(path + "html\\index.html"));
+        try (FileWriter writer = new FileWriter(new File(path + "html/index.html"));
         BufferedWriter bw = new BufferedWriter(writer)){
 
 
