@@ -1,4 +1,7 @@
+AuthUserFile /usr/local/apache2/htdocs/mjeanai/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Veuillez vous identifier"
 AuthType Basic
-AuthName "My restricted Area"
-AuthUserFile html/mjeanai/.htpasswd
-Require valid-user
+<Limit GET POST>
+require valid-user
+</Limit>

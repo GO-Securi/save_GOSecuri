@@ -25,7 +25,7 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(writer)){
 
 
-            bw.write("<!DOCTYPE html><html><head><link href=\"Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><ul class=\"agents\">");
+            bw.write("<!DOCTYPE html><html><head><title>Liste des agents</title><link href=\"Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><ul class=\"agents\">");
             //Lecture du fichier staff.txt
             BufferedReader staff = new BufferedReader(new FileReader(new File(path + "staff.txt")));
             String line_staff = staff.readLine();
