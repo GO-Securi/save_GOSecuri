@@ -19,6 +19,7 @@ public class Main {
         //Ecriture du fichier agents.html (liste des agents)
         File dossierhtml = new File(path + "html"); // On cree le dossier si il n'existe pas
         dossierhtml.mkdir();
+        Files.copy(Paths.get("Avatar.jpg"), Paths.get("html", "Avatar.jpg"), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(Paths.get("Style.css"), Paths.get("html", "Style.css"), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(Paths.get("LogoGoSecuri.png"), Paths.get("html", "LogoGoSecuri.png"), StandardCopyOption.REPLACE_EXISTING);
         try (FileWriter writer = new FileWriter(new File(path + "html/index.html"));
@@ -100,7 +101,7 @@ public class Main {
                     System.out.println("    Liste inventaire: " + inv_agents);
  
                     //Header
-                    bw_fiche_agent.write("<!DOCTYPE html><html><head><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"..\\LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><div class=\"div_nomprenom\"><p class=\"nomprenom\">"+infos_agents.get(0) + " " + infos_agents.get(1)+ " (" + infos_agents.get(2) + ")" +"</p><img class=\"img_profil\" src=\"/img/prenom_nom.png\" alt=\"Photo de X\"><h2>Mon Equipement:</h2><ul class=\"liste\">");
+                    bw_fiche_agent.write("<!DOCTYPE html><html><head><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"..\\LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><div class=\"div_nomprenom\"><p class=\"nomprenom\">"+infos_agents.get(0) + " " + infos_agents.get(1)+ " (" + infos_agents.get(2) + ")" +"</p><img class=\"img_profil\" src=\"Avatar.jpg\" alt=\"Photo de X\"><h2>Mon Equipement:</h2><ul class=\"liste\">");
                     //Boucle pour afficher l'inventaire
                     
 
