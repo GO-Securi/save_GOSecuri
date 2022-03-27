@@ -36,11 +36,11 @@ public class Main {
             while (line_staff != null) {
                 BufferedReader agent = new BufferedReader(new FileReader(new File(path + line_staff +".txt")));
 
-                //de 1 a 4 : infos agents
+                //de 0 a 3 : infos agents
                 //0: Nom
                 //1: prenom
                 //2: role
-                //3: mdp de ses morts
+                //3: mdp
                 //de 5 a ? : inventaire
 
                 ArrayList<String> infos_agents = new ArrayList<String>();
@@ -117,7 +117,7 @@ public class Main {
                 }
 
                 bw.write("<li class=\"agent\" ><a href=\""+ line_staff + "\\" + "index.html\">");
-                bw.write(infos_agents.get(0) + " " + infos_agents.get(1));
+                bw.write(infos_agents.get(0) + " " + infos_agents.get(1) + "( " + infos_agents.get(2) + ")");
                 bw.write("</a></li>");
 
 
