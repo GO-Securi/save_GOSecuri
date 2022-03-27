@@ -79,7 +79,7 @@ public class Main {
                         htaccess.write("AuthName \"Veuillez vous identifier\""+ "\n");
                         htaccess.write("AuthType Basic"+ "\n");
 
-                        htaccess.write("<Limit GET POST>+ "\n"");
+                        htaccess.write("<Limit GET POST>"+ "\n");
                         htaccess.write("require valid-user"+ "\n");
                         htaccess.write("</Limit>"+ "\n");
                     }catch (IOException e) {
