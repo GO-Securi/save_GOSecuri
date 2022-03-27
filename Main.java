@@ -19,7 +19,6 @@ public class Main {
         //Ecriture du fichier agents.html (liste des agents)
         File dossierhtml = new File(path + "html"); // On cree le dossier si il n'existe pas
         dossierhtml.mkdir();
-        Files.copy(Paths.get("Avatar.jpg"), Paths.get("html", "Avatar.jpg"), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(Paths.get("Style.css"), Paths.get("html", "Style.css"), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(Paths.get("LogoGoSecuri.png"), Paths.get("html", "LogoGoSecuri.png"), StandardCopyOption.REPLACE_EXISTING);
         try (FileWriter writer = new FileWriter(new File(path + "html/index.html"));
@@ -36,6 +35,7 @@ public class Main {
 
             while (line_staff != null) {
                 BufferedReader agent = new BufferedReader(new FileReader(new File(path + line_staff +".txt")));
+                Files.copy(Paths.get(line_staff +".png"), Paths.get("html", line_staff +".png"), StandardCopyOption.REPLACE_EXISTING);
 
                 //de 0 a 3 : infos agents
                 //0: Nom
@@ -101,7 +101,7 @@ public class Main {
                     System.out.println("    Liste inventaire: " + inv_agents);
  
                     //Header
-                    bw_fiche_agent.write("<!DOCTYPE html><html><head><title>Agent: " +infos_agents.get(0) + " " + infos_agents.get(1)+ "</title><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"..\\LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><div class=\"div_nomprenom\"><p class=\"nomprenom\">"+infos_agents.get(0) + " " + infos_agents.get(1)+ " (" + infos_agents.get(2) + ")" +"</p><img class=\"img_profil\" src=\"..\\" + line_staff + ".png\" alt=\"Photo de X\"><h2>Mon Equipement:</h2><ul class=\"liste\">");
+                    bw_fiche_agent.write("<!DOCTYPE html><html><head><title>Agent: " +infos_agents.get(0) + " " + infos_agents.get(1)+ "</title><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"..\\LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><div class=\"div_nomprenom\"><p class=\"nomprenom\">"+infos_agents.get(0) + " " + infos_agents.get(1)+ "<br>(" + infos_agents.get(2) + ")" +"</p><img class=\"img_profil\" src=\"..\\" + line_staff + ".png\" alt=\"Photo de X\"><h2>Mon Equipement:</h2><ul class=\"liste\">");
                     //Boucle pour afficher l'inventaire
                     
 
