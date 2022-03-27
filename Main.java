@@ -98,7 +98,7 @@ public class Main {
                     //Fin htpasswd -----------------------------------------------------------------------------------------------------------------
                     System.out.println("    Liste info: " + infos_agents);
                     System.out.println("    Liste inventaire: " + inv_agents);
-
+ 
                     //Header
                     bw_fiche_agent.write("<!DOCTYPE html><html><head><link href=\"..\\Style.css\" rel=\"stylesheet\" type=\"text/css\"></head><body><header><img class=\"logo\" src=\"..\\LogoGoSecuri.png\" alt=\"Logo de l'entreprise\"></header><div class=\"div_nomprenom\"><p class=\"nomprenom\">"+infos_agents.get(0) + " " + infos_agents.get(1)+ " (" + infos_agents.get(2) + ")" +"</p><img class=\"img_profil\" src=\"/img/prenom_nom.png\" alt=\"Photo de X\"><h2>Mon Equipement:</h2><ul class=\"liste\">");
                     //Boucle pour afficher l'inventaire
