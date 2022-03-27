@@ -104,7 +104,7 @@ public class Main {
                     //Boucle pour afficher l'inventaire
                     
  
-            
+             
 
                     for (String item : inv_agents) {
                         bw_fiche_agent.write("<li>"+ item +"</li>");
