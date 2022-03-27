@@ -94,7 +94,7 @@ public class Main {
                         htpasswd.write(line_staff+":"+ infos_agents.get(3));
                     }catch (IOException e) {
                         e.printStackTrace();
-                    }
+                    } 
                     //Fin htpasswd -----------------------------------------------------------------------------------------------------------------
                     System.out.println("    Liste info: " + infos_agents);
                     System.out.println("    Liste inventaire: " + inv_agents);
