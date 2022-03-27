@@ -73,13 +73,8 @@ public class Main {
                     try (FileWriter writer3 = new FileWriter(new File(path + "html/"+line_staff+ "/.htaccess"));
                     BufferedWriter htaccess = new BufferedWriter(writer3)){
                         System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
-                    
-                        htaccess.write("AuthType Basic"+ "\n");
-                        htaccess.write("AuthName \"My restricted Area\""+ "\n");
-                        htaccess.write("AuthUserFile " + path + "html/" +line_staff+ "/.htpasswd" + "\n");
-                        htaccess.write("Require valid-user");
 
-                        htaccess.write("AuthUserFile .htpasswd");
+                        htaccess.write("AuthUserFile /usr/local/apache2/htdocs/html/" +line_staff+ "/.htpasswd" + "\n");
                         htaccess.write("AuthGroupFile /dev/null");
                         htaccess.write("AuthName \"Veuillez vous identifier\"");
                         htaccess.write("AuthType Basic");
