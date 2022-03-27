@@ -74,7 +74,7 @@ public class Main {
                     BufferedWriter htaccess = new BufferedWriter(writer3)){
                         System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
 
-                        htaccess.write("AuthUserFile /usr/local/apache2/htdocs/html/" +line_staff+ "/.htpasswd" + "\n");
+                        htaccess.write("AuthUserFile /usr/local/apache2/htdocs/" +line_staff+ "/.htpasswd" + "\n");
                         htaccess.write("AuthGroupFile /dev/null");
                         htaccess.write("AuthName \"Veuillez vous identifier\"");
                         htaccess.write("AuthType Basic");
