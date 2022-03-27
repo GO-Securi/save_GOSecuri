@@ -75,13 +75,13 @@ public class Main {
                         System.out.println("    Fichier crée: " + path + "html/"+line_staff+ "/.htaccess");
 
                         htaccess.write("AuthUserFile /usr/local/apache2/htdocs/" +line_staff+ "/.htpasswd" + "\n");
-                        htaccess.write("AuthGroupFile /dev/null");
-                        htaccess.write("AuthName \"Veuillez vous identifier\"");
-                        htaccess.write("AuthType Basic");
+                        htaccess.write("AuthGroupFile /dev/null"+ "\n");
+                        htaccess.write("AuthName \"Veuillez vous identifier\""+ "\n");
+                        htaccess.write("AuthType Basic"+ "\n");
 
-                        htaccess.write("<Limit GET POST>");
-                        htaccess.write("require valid-user");
-                        htaccess.write("</Limit>");
+                        htaccess.write("<Limit GET POST>+ "\n"");
+                        htaccess.write("require valid-user"+ "\n");
+                        htaccess.write("</Limit>"+ "\n");
                     }catch (IOException e) {
                         e.printStackTrace();
                     }
