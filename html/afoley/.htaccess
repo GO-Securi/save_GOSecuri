@@ -1,7 +1,0 @@
-AuthUserFile /usr/local/apache2/htdocs/afoley/.htpasswd
-AuthGroupFile /dev/null
-AuthName "Veuillez vous identifier"
-AuthType Basic
-<Limit GET POST>
-require valid-user
-</Limit>
