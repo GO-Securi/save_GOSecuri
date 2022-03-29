@@ -3,7 +3,7 @@ gants Gants d'itervention\t
 brassard Brassard de sécurité\t
 menottes Porte menottes\t
 cyno Bandeau agent cynophile\t
-talky Talkies Walkies\t
+talkie Talkies Walkies\t
 lampe Lampe Torche\t
 kit Kit oreillette\t
 taser Tasers\t
