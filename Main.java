@@ -15,7 +15,7 @@ public class Main {
         //etape 1
         System.out.println("Debut generation liste agents");
         String path = "";
-
+ 
         //Ecriture du fichier agents.html (liste des agents)
         File dossierhtml = new File(path + "html"); // On cree le dossier si il n'existe pas
         dossierhtml.mkdir();
